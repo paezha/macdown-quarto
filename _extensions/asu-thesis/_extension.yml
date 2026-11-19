@@ -1,0 +1,32 @@
+title: ASU Thesis Quarto Template 
+author: Julian Tao
+version: 0.1.0
+contributes:
+  formats:
+    common:
+      # define below YAML configuration common to all formats
+      filters:
+        # You can include here Lua filters from your extension format 
+        - color-text.lua
+      shortcodes:
+        # You can include here Lua filters defining shortcodes from your extension
+        - shortcodes.lua
+      link-citations: true
+    pdf:
+      template: asuthesis.tex
+      colorlinks: true
+      csl: asuthesis.csl
+      # format-resources:
+        # - asuthesis.csl
+        # - asuthesis.scss
+    html:
+      # define default configuration for the html version of your format
+      number-sections: true
+      toc: true
+      theme: 
+        - cosmo
+        - asuthesis.scss
+      code-link: true
+      published-title: "Last updated"
+      date-format: "DD MMMM YYYY"
+      number-depth: 5
